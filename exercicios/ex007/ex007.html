@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de pais</title>
+</head>
+<body>
+    <h1>Você e Brasileiro ?</h1>
+    <p>O pais em que nasceu:<input type="text" name="pais" id="ipais"> </p>
+    <input type="button" value="verificar" onclick="confirmar()">
+    <div id="res">
+
+    </div>
+
+
+
+    <script>
+        function confirmar() {
+    
+        var pais = window.document.querySelector ('input#ipais')
+        var res = window.document.querySelector('div#res')
+        var nac =pais.value;
+        res.innerHTML = `<p> Seu pais de origem é  <strong> ${nac}</strong> </p>`;
+        if(nac == 'Brasil' || nac == 'brasil'){
+            res.innerHTML += `<p> Você e Brasileiro`;
+        } else {
+            res.innerHTML += `<p> Você é estrangeiro`;
+        }
+   
+        }
+
+    </script>
+</body>
+</html>
